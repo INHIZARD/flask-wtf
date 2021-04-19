@@ -20,5 +20,20 @@ def list_prof(list):
     return render_template('base.html', list=list, n=2)
 
 
+@app.route('/answer')
+@app.route('/auto_answer')
+def answer():
+    lis = {
+        'Название': 'Анкета',
+        'Фамилия': 'Бобик',
+        'Имя': 'Андрей',
+        'Образование': 'Не имеется',
+        'Пол': 'male',
+        'Мотивация': 'Всегда хотел быть подальше от людей',
+        'Готовы остаться на Марсе?': True
+    }
+    return render_template('auto_answer.html', lis=lis)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
