@@ -25,6 +25,28 @@
                     <img src="../static/img/star_ship_2.png" alt="Картинка не загрузилась" width="1000px" class="center-pic">
                 {% endif %}
             </div>
+        {% elif n == 2 %}
+            <div>
+                <h2><p align="center">Список профессий</p></h2>
+                {% set prof_list=["Инженер-исследователь", "Пилот", "Строитель", "Экзобиолог", "Врач", "Климатолог", "Астрогеолог", "Метеоролог"] %}
+                {% if list == 'ol' %}
+                    <ol>
+                        {% for prof in prof_list %}
+                        <li>
+                            {{ prof }}
+                        </li>
+                        {% endfor %}
+                    </ol>
+                {% elif list == 'ul' %}
+                    <ul>
+                        {% for prof in prof_list %}
+                        <li>
+                            {{ prof }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
         {% endif %}
     </body>
 </html>
