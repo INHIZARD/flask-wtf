@@ -9,6 +9,7 @@
               crossorigin="anonymous">
         <link href="../static/css/center_img.css" rel="stylesheet">
         <link href="../static/css/list.css" rel="stylesheet">
+        <link href="../../../static/css/table.css" rel="stylesheet">
         {% if n == 0 %}
             <title>{{title}}</title>
         {% endif %}
@@ -52,6 +53,8 @@
             {% block content %}{% endblock %}
         {% elif n == 4 %}
             {% block list %}{% endblock %}
+        {% elif n == 5 %}
+            {% block table %}{% endblock %}
         {% endif %}
     </body>
 </html>
