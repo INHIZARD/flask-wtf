@@ -8,6 +8,7 @@
               integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
               crossorigin="anonymous">
         <link href="../static/css/center_img.css" rel="stylesheet">
+        <link href="../static/css/list.css" rel="stylesheet">
         {% if n == 0 %}
             <title>{{title}}</title>
         {% endif %}
@@ -47,6 +48,10 @@
                     </ul>
                 {% endif %}
             </div>
+        {% elif n == 3 %}
+            {% block content %}{% endblock %}
+        {% elif n == 4 %}
+            {% block list %}{% endblock %}
         {% endif %}
     </body>
 </html>
