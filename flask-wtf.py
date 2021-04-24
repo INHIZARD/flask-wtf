@@ -45,5 +45,16 @@ def login():
     return render_template('login.html', title='Аварийный доступ', form=form, n=3)
 
 
+@app.route('/distribution')
+def distribution():
+    astronaut_list = ['Ридли Скотт',
+                      'Энди Уир',
+                      'Марк Уотни',
+                      'Венката Капур',
+                      'Тедди Сандерс',
+                      'Шон Бин']
+    return render_template('list.html', list=astronaut_list, n=4)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
